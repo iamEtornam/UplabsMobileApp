@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/ant_design.dart';
+import 'package:flutter_icons/zocial.dart';
 import 'package:uplabs_app/pages/dashboard_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -40,12 +42,12 @@ class LoginPage extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => DashboardPage()));
                       },
-                      child: siginButton(context, Colors.blue, 'Continue with Facebook', Icons.ac_unit)),
+                      child: siginButton(context, Colors.blue, 'Continue with Facebook', Zocial.getIconData('facebook'))),
                     SizedBox(height: 15, ),
-                    siginButton(context, Colors.blue, 'Continue with Google', Icons.golf_course),
+                    siginButton(context, Colors.blue, 'Continue with Google', AntDesign.getIconData('google')),
                     SizedBox(height: 15, ),
 
-                    siginButton(context, Colors.blue, 'Continue with Twitter', Icons.border_inner),
+                    siginButton(context, Colors.blueAccent, 'Continue with Twitter', AntDesign.getIconData('twitter')),
                     SizedBox(height: 15, ),
 
 
@@ -60,7 +62,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget siginButton(BuildContext context, MaterialColor color, String s, IconData iconData) {
+  Widget siginButton(BuildContext context, Color color, String s, IconData iconData) {
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.all(8),
